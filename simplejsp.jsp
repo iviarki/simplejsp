@@ -12,7 +12,7 @@
       ResultSet rs = null;
       try {
         Context initCtx = new InitialContext();
-        ds = (DataSource) initCtx.lookup("java:comp/env/raketdb");
+        ds = (DataSource) initCtx.lookup("java:comp/env/jdbc/raketdb");
         con = ds.getConnection();
         output.append("Databases found:<br>");
         stmt = con.createStatement();
